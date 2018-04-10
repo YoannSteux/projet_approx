@@ -14,7 +14,7 @@ n = length(Px);
 %T= [T T(1:degre-1)];
 
 % T periodique
-T = [1:(n+3*degre+1 )] - degre;
+T = [1:(n+2*degre )] - degre;
 
 
 p = poids(nb_P);
@@ -23,7 +23,7 @@ prec =0.005;
 
 X = [];
 Y = [];
-for t = T(degre+1) : prec : T(end-degre)
+for t = 2 : prec : T(end)
     [x,y] = nurbs_courbe(t, T, P, p , degre)
     X = [X x];
     Y = [Y y];

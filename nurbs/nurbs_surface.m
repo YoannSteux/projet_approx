@@ -8,6 +8,9 @@ Nz = 0;
 
 for i=1 : (length(Tu) - degre_u -1)
     for j=1 : (length(Tv) - degre_v -1)
+        i
+        j
+        
         Bik_u = B(i,degre_u,u, Tu);
         Bjk_v = B(j,degre_v,v, Tv);
         M = M + poids(i,j) * Bik_u * Bjk_v;
