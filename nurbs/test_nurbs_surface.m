@@ -53,7 +53,7 @@ hold on;
 
 
 P = tore();
-[n1,n2,n3] = size(P);
+
 X = P(:,:,1);
 Y = P(:,:,2);
 Z = P(:,:,3);
@@ -66,21 +66,23 @@ Z = [Z ; Z(1,:)];
 X = [X X(:,1)];
 Y = [Y Y(:,1)];
 Z = [Z Z(:,1)];
+
+
 % modification de P
 P = zeros(size(X,1), size(X,2), 3);
 P(:,:,1) = X;
 P(:,:,2) = Y;
 P(:,:,3) = Z;
 
+[n1,n2,n3] = size(P);
 
 
+degre_u = 2;
+degre_v = 2;
 
-degre_u = 3;
-degre_v = 3;
-
-Tu = vecteur_nodal(degre_u , n1+1);
-Tv = vecteur_nodal(degre_v , n2+1);
-poids = poids_3D(n1+1,n2+1);
+Tu = vecteur_nodal(degre_u , n1);
+Tv = vecteur_nodal(degre_v , n2);
+poids = poids_3D(n1,n2);
 prec = 0.08;
 
 figure(1);
