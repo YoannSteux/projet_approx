@@ -6,7 +6,7 @@ g = grille();
 
 
 n_iter = 4;
-degre = 3;
+degre = 0;
 
 
 % surface grille base

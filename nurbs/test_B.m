@@ -1,8 +1,8 @@
 clear;
 
 
-k = 3;
-degre = 3;
+k = 1;
+degre = k;
 nb_P = 4 ;
 T = vecteur_nodal(degre, nb_P);
 prec = 0.01;
